@@ -1,18 +1,18 @@
 class PigLatinizer
   
   def piglatinize(word)
-    @word = word.split('')
-    if @word[0] == (/aeiouAEIOU/)
-      @word.push(way)
+    pigword = word.split('')
+    if pigword[0] == (/aeiouAEIOU/)
+      pigword.push(way)
     else
-      if word[0] == (/[^aeiouAEIOU]/) && word[1] == (/[^aeiouAEIOU]/)
-        append = word[0,1].join('') + 'ay'
-        word.slice(2, (word.length + 1)).push(append).join('')
+      if pigword[0] == (/[^aeiouAEIOU]/) && pigword[1] == (/[^aeiouAEIOU]/)
+        append = pigword[0,1].join('') + 'ay'
+        pigword.slice(2, (pigword.length + 1)).push(append).join('')
       else
-        word.push(word[0] + 'ay').shift.join('')
+        pigword.push(word[0] + 'ay').shift.join('')
       end
     end
-    word
+    pigword
   end
   
   def pg_sentence(user_phrase)
