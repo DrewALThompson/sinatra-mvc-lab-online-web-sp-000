@@ -2,9 +2,9 @@ class PigLatinizer
   
   def piglatinize(word)
     if /\A[aeiouAEIOU]/.match(word)
-      word.split('')
-      word.push('way')
-      word.join('')
+      pigword = word.split('')
+      pigword.push('way')
+      pigword.join('')
     else
       word.split('')
       if word[0] == (/[^aeiouAEIOU]/) && word[1] == (/[^aeiouAEIOU]/)
