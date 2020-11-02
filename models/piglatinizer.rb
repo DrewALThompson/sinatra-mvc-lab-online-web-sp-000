@@ -8,7 +8,9 @@ class PigLatinizer
     else
       if /[^aeiouAEIOU]/.match(pigword[0]) && /[^aeiouAEIOU]/.match(pigword[1])
         append = pigword[0,1].join('') + 'ay'
-        pigword.slice(2, (word.length + 1)).push(append).join('')
+        pigword.slice(2, (word.length + 1))
+        pigword.push(append)
+        pigword.join('')
       else 
         pigword.push(word[0] + 'ay')
         pigword.shift
