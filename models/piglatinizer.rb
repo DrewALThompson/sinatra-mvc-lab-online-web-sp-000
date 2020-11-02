@@ -6,10 +6,10 @@ class PigLatinizer
       pigword.push('way')
       pigword.join('')
     else
-      if /[^aeiouAEIOU]/.match(pigword[0])
+      if /[^aeiouAEIOU]/.match(pigword[0]) && /[^aeiouAEIOU]/.match(pigword[1])
         append = word[0,1].join('') + 'ay'
         word.slice(2, (word.length + 1)).push(append).join('')
-      else word[0] == (/[^aeiouAEIOU]/) && word[1] != (/[^aeiouAEIOU]/)
+      else 
         word.push(word[0] + 'ay')
         word.shift
         word.join('')
