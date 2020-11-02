@@ -7,7 +7,7 @@ class App < Sinatra::Base
   end
   
   post '/' do
-    pg_text = PigLatinizer.new(params[:user_phrase])
-    @pg_text.pg_sentence()
+    pg_text = PigLatinizer.new.(params[:user_phrase])
+    
   end
 end
