@@ -6,9 +6,11 @@
   </head>
   <body>
     <h1>Pig Latinizer</h1>
-    <form action='/piglatinize' method='POST'>
-      <p><label for='user_phrase'></label></p>
+    <h3>Enter your phrase:</h3>
+    <form method="POST" action="/piglatinize">
+      <p><label for="user_phrase">Word:</label>
+      <input type="text" name="user_phrase"></p>
+      <input type="submit" name="submit">
     </form>
-  
   </body>
 </html>
