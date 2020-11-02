@@ -19,6 +19,7 @@ class PigLatinizer
   end
   
   def pg_sentence(user_phrase)
-    user_phrase.split(' ').collect {|word| self.piglatinize(word)}.join('')
+    pgphrase = user_phrase.split(' ').collect {|word| self.piglatinize(word)}
+    pgphrase.join('')
   end
 end
