@@ -16,6 +16,6 @@ class PigLatinizer
   end
   
   def pg_sentence(text)
-    text.
+    text.split(' ').each {|word| word.
   end
 end
