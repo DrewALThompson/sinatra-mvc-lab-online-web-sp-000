@@ -9,7 +9,9 @@ class PigLatinizer
         append = pigword[0,1].join('') + 'ay'
         pigword.slice(2, (pigword.length + 1)).push(append).join('')
       else
-        pigword.push(word[0] + 'ay').shift.join('')
+        pigword.push(word[0] + 'ay')
+        pigword.shift
+        pigword.join('')
       end
     end
     pigword
