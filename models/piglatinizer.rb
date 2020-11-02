@@ -4,6 +4,7 @@ class PigLatinizer
     pigword = word.split('')
     if pigword[0] == (/aeiouAEIOU/)
       pigword.push(way)
+      pigword.join('')
     else
       if pigword[0] == (/[^aeiouAEIOU]/) && pigword[1] == (/[^aeiouAEIOU]/)
         append = pigword[0,1].join('') + 'ay'
