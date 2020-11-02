@@ -8,6 +8,6 @@ class App < Sinatra::Base
   
   post '/' do
     @pg_text = PigLatinizer.new(params[:user_phrase])
-    @pg_text.pg_sentence
+    @pg_text.pg_sentence()
   end
 end
