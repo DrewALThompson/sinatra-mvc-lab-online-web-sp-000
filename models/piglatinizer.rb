@@ -1,6 +1,6 @@
 class PigLatinizer
   
-  def pg_word(word)
+  def piglatinize(word)
     word.split('')
     if word[0] == (/aeiouAEIOU/)
       word.push(way)
