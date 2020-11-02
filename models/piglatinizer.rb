@@ -1,12 +1,12 @@
 class PigLatinizer
   
   def piglatinize(word)
-    pigword = word.split('')
-    if pigword[0] == (/[aeiouAEIOU]/)
-      pigword.push(way)
-      pigword.join('')
+    if word == (/\A[aeiouAEIOU]/)
+      word.split('')
+      word.push('way')
+      word.join('')
     else
-      if pigword[0] == (/[^aeiouAEIOU]/) && pigword[1] == (/[^aeiouAEIOU]/)
+      if word[0] == (/[^aeiouAEIOU]/) && word[1] == (/[^aeiouAEIOU]/)
         append = pigword[0,1].join('') + 'ay'
         pigword.slice(2, (pigword.length + 1)).push(append).join('')
       else pigword[0] == (/[^aeiouAEIOU]/) && pigword[1] != (/[^aeiouAEIOU]/)
